@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".front.activities.HeroActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/zero"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="2">
+
+        <FrameLayout
+            android:id="@+id/frame_layout_hero_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/image_view_hero_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient" />
+
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/image_button_details"
+            android:background="@drawable/ic_star_hero_not_favorite"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/frame_layout_hero_details"
+            app:layout_constraintBottom_toBottomOf="@id/frame_layout_hero_details"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_large"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <TextView
+            android:id="@+id/text_view_hero_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintBottom_toBottomOf="@id/frame_layout_hero_details"
+            android:layout_marginBottom="@dimen/margin_large"
+            app:layout_constraintLeft_toLeftOf="@id/frame_layout_hero_details"
+            android:layout_marginLeft="@dimen/margin_large"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="@dimen/zero"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_exp_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding_small"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold"
+            />
+
+        <ExpandableListView
+            android:id="@+id/expandable_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="7"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

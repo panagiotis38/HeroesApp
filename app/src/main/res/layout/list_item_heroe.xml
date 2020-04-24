@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/card_view_elevation"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardPreventCornerOverlap="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hero_image_height"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="@dimen/zero"
+            android:layout_margin="@dimen/zero">
+
+            <ImageView
+                android:id="@+id/hero_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient" />
+
+        </FrameLayout>
+
+
+        <ImageButton
+            android:id="@+id/image_button_list"
+            android:background="@drawable/ic_star_hero_not_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/frame_layout"
+            app:layout_constraintLeft_toLeftOf="@+id/frame_layout"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_large"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/hero_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/frame_layout"
+            android:layout_marginBottom="@dimen/margin_large"
+            app:layout_constraintLeft_toLeftOf="@id/frame_layout"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_large"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
