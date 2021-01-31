@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Marvel Heroes App</string>
+    <string name="default_hero_name">Hero Name</string>
+    <string name="search_title">Search a Marvel Hero</string>
+    <string name="no_search_result">No Hero matches your search criteria</string>
+    <string name="splash_text">Welcome to Marvel Heroes App</string>
+</resources>
